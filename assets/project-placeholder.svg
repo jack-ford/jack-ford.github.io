@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#e7e9e1"/>
+  <g fill="none" stroke="#a3ad9b" stroke-width="2">
+    <rect x="225" y="100" width="350" height="235" rx="5"/>
+    <path d="M225 137h350"/>
+    <path d="m354 207-30 30 30 30m92-60 30 30-30 30m-34-69-24 78" stroke="#74856b" stroke-width="3"/>
+  </g>
+  <g fill="#a3ad9b"><circle cx="245" cy="119" r="3"/><circle cx="258" cy="119" r="3"/><circle cx="271" cy="119" r="3"/></g>
+  <text x="400" y="388" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#58664f">Your project image here</text>
+</svg>

@@ -3,24 +3,252 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f7f6f2">
     <title>Jack Ford</title>
+    <script src="theme.js"></script>
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
+    <script src="vendor/bootstrap/bootstrap.bundle.min.js" defer></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <main>
-        <header>
-            <h1>Jack Ford</h1>
-            <p>Bryn Mawr, PA</p>
-            <a href="mailto:jackbarkerford@gmail.com" title="jackbarkerford@gmail.com">jackbarkerford@gmail.com</a>
-            <p>(610) 888-9511</p>
-        </header>
-        <nav>
-            <a href="https://github.com/Shynee1" target="_blank"><span>GitHub</span></a>
-            <span class="dot">•</span>
-            <a href="https://www.linkedin.com/in/jack-ford-66a637282/" target="_blank"><span>LinkedIn</span></a>
-            <span class="dot">•</span>
-            <a href="https://drive.google.com/file/d/1j_IXYGoXIaXfHVXz24nu2A4vIX9MKiQG/view?usp=sharing" target="_blank"><span>Resume</span></a>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg container" aria-label="Main navigation">
+            <a class="navbar-brand" href="#home">Jack Ford</a>
+            <button class="theme-toggle order-1 order-lg-2 ms-auto ms-lg-3" id="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode">
+                <svg class="theme-icon theme-icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                    <path d="M20.9 13A9 9 0 0 1 11 3.1 9 9 0 1 0 20.9 13Z"></path>
+                </svg>
+                <svg class="theme-icon theme-icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true" focusable="false">
+                    <circle cx="12" cy="12" r="4"></circle>
+                    <path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path>
+                </svg>
+            </button>
+            <button class="navbar-toggler order-2 ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#main-navigation"
+                aria-controls="main-navigation" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse order-3 order-lg-1" id="main-navigation">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#home" aria-current="location">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
         </nav>
+    </header>
+    <main id="main-content">
+        <section class="home-section" id="home" aria-labelledby="home-title">
+            <div class="business-card-frame">
+                <div class="business-card" id="businessCard">
+                    <a class="phone-number" href="tel:+16108889511">(610) 888-9511</a>
+                    <div class="logos">
+                        <img class="logo" src="haverford.png" width="72" height="64" alt="Haverford">
+                        <img class="logo" src="duke.svg" width="72" height="64" alt="Duke">
+                    </div>
+                    <div class="business-card-content">
+                        <h1 class="name" id="home-title"><span>J</span><span class="rest-letters">ACK</span> FORD</h1>
+                        <p class="job-title">ECE/CS @ Duke | Angier B. Duke Scholar</p>
+                    </div>
+                    <div class="business-card-footer">
+                        <a href="mailto:jack.ford@duke.edu">jack.ford@duke.edu</a>
+                        <a href="https://www.linkedin.com/in/jack-barker-ford" target="_blank" rel="noopener noreferrer">LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a>
+                        <span>Bryn Mawr, PA</span>
+                        <a href="https://github.com/jack-ford" target="_blank" rel="noopener noreferrer">GitHub<span class="visually-hidden"> (opens in a new tab)</span></a>
+                    </div>
+                </div>
+            </div>
+            <a class="scroll-link" href="#about">A little more about me <span aria-hidden="true">↓</span></a>
+        </section>
+        <section class="page-section" id="about" aria-labelledby="about-title">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="section-number">01 / About</p>
+                    <h2 id="about-title">A bit of background.</h2>
+                </div>
+                <div class="row g-5 align-items-center">
+                    <div class="col-md-7 col-lg-8 about-copy">
+                        <!-- EDIT: replace the bracketed text with your own introduction. -->
+                        <p class="lead">Hi, I’m Jack. I’m a software and machine learning engineer interested in [the problems you like to solve].</p>
+                        <p>[Write a short paragraph about your background, education, and what brought you to engineering. Keep it conversational — this is a chance to introduce the person behind the work.]</p>
+                        <p>[Outside of work, you can usually find me exploring a hobby, learning something new, or working on a personal project. Add a few things that make you, you.]</p>
+                        <a class="text-link" href="#contact">Get in touch <span aria-hidden="true">↗</span></a>
+                    </div>
+                    <div class="col-md-5 col-lg-4">
+                        <!-- IMAGE: replace src and alt with your portrait; keep the class for sizing. -->
+                        <img class="portrait" src="assets/portrait-placeholder.svg" width="600" height="700" alt="Placeholder for a portrait of Jack" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="page-section" id="experience" aria-labelledby="experience-title">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="section-number">02 / Experience</p>
+                    <h2 id="experience-title">Where I’ve contributed.</h2>
+                    <p>A place for the roles, teams, and lessons that have shaped my work.</p>
+                </div>
+                <!-- EXPERIENCE: duplicate an entire article for each role, newest first. -->
+                <article class="experience-entry row gy-3">
+                    <div class="col-md-4">
+                        <p class="entry-date">[Month Year] — Present</p>
+                        <p class="entry-location">[City, State or Remote]</p>
+                    </div>
+                    <div class="col-md-8">
+                        <h3>[Role title]</h3>
+                        <p class="organization">[Company or organization]</p>
+                        <p>[Describe your team, the problems you worked on, and the scope of your role in one or two sentences.]</p>
+                        <ul class="achievement-list">
+                            <li>[Explain something you built or improved and why it mattered.]</li>
+                            <li>[Share a specific contribution or measurable result.]</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="experience-entry row gy-3">
+                    <div class="col-md-4">
+                        <p class="entry-date">[Month Year] — [Month Year]</p>
+                        <p class="entry-location">[City, State or Remote]</p>
+                    </div>
+                    <div class="col-md-8">
+                        <h3>[Previous role title]</h3>
+                        <p class="organization">[Company, lab, or organization]</p>
+                        <p>[Summarize a previous position, internship, research role, or volunteer experience.]</p>
+                        <ul class="achievement-list">
+                            <li>[Describe your main responsibility or a project you owned.]</li>
+                            <li>[Add an outcome, a skill you developed, or a lesson you took away.]</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="page-section" id="projects" aria-labelledby="projects-title">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="section-number">03 / Projects</p>
+                    <h2 id="projects-title">Things I’ve worked on.</h2>
+                    <p>A few projects, from early experiments to finished work.</p>
+                </div>
+                <div class="row g-4">
+                    <!-- PROJECT: duplicate a col-md-6 block to add another project. -->
+                    <div class="col-md-6">
+                        <article class="project-card">
+                            <!-- IMAGE: replace src and alt with a screenshot or project image. -->
+                            <img class="project-image" src="assets/project-placeholder.svg" width="800" height="500" alt="Placeholder for the first project screenshot" loading="lazy">
+                            <div class="project-content">
+                                <p class="project-category">[Project category] / [Year]</p>
+                                <h3>[Project name]</h3>
+                                <p>[What did you build, who is it for, and what problem does it solve? Include your contribution and one thing you’re proud of.]</p>
+                                <ul class="tag-list" aria-label="Project technologies">
+                                    <li>[Technology]</li>
+                                    <li>[Technology]</li>
+                                    <li>[Technology]</li>
+                                </ul>
+                                <!-- LINKS: replace the text below with real links when ready, for example:
+                                <a class="text-link" href="https://github.com/USERNAME/REPOSITORY">Source code ↗</a>
+                                <a class="text-link" href="https://YOUR-PROJECT-URL">Live demo ↗</a>
+                                -->
+                                <p class="project-link-placeholder">[Project links coming soon]</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-6">
+                        <article class="project-card">
+                            <img class="project-image" src="assets/project-placeholder.svg" width="800" height="500" alt="Placeholder for the second project screenshot" loading="lazy">
+                            <div class="project-content">
+                                <p class="project-category">[Project category] / [Year]</p>
+                                <h3>[Project name]</h3>
+                                <p>[Introduce another project. Explain the idea, your approach, and the result. Personal projects, research, and open-source work all fit here.]</p>
+                                <ul class="tag-list" aria-label="Project technologies">
+                                    <li>[Technology]</li>
+                                    <li>[Technology]</li>
+                                </ul>
+                                <!-- LINKS: use the link example in the first project when you have a URL. -->
+                                <p class="project-link-placeholder">[Project links coming soon]</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="page-section" id="skills" aria-labelledby="skills-title">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="section-number">04 / Skills</p>
+                    <h2 id="skills-title">My toolkit.</h2>
+                    <p>The languages, tools, and approaches I bring to a project.</p>
+                </div>
+                <!-- SKILLS: rename groups and replace each list item. Add or remove items freely. -->
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="skill-group">
+                            <h3>Languages</h3>
+                            <ul class="skill-list">
+                                <li>[Language]</li>
+                                <li>[Language]</li>
+                                <li>[Language]</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="skill-group">
+                            <h3>Frameworks &amp; libraries</h3>
+                            <ul class="skill-list">
+                                <li>[Framework]</li>
+                                <li>[Library]</li>
+                                <li>[Library]</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="skill-group">
+                            <h3>Tools &amp; practices</h3>
+                            <ul class="skill-list">
+                                <li>[Development tool]</li>
+                                <li>[Platform]</li>
+                                <li>[Engineering practice]</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="page-section contact-section" id="contact" aria-labelledby="contact-title">
+            <div class="container">
+                <div class="row gy-4 align-items-start">
+                    <div class="col-md-7">
+                        <div class="section-heading">
+                            <p class="section-number">05 / Contact</p>
+                            <h2 id="contact-title">Let’s connect.</h2>
+                        </div>
+                        <!-- EDIT: add the kinds of opportunities or conversations you welcome. -->
+                        <p class="contact-copy">[Have a project in mind, an opportunity to share, or just want to say hello? Add a short invitation here.]</p>
+                        <a class="btn contact-button" href="mailto:jack.ford@duke.edu">Send me an email <span aria-hidden="true">↗</span></a>
+                    </div>
+                    <div class="col-md-5 col-lg-4 offset-lg-1">
+                        <!-- CONTACT: keep these links in sync with the business card above. -->
+                        <dl class="contact-details">
+                            <dt>Email</dt>
+                            <dd><a href="mailto:jack.ford@duke.edu">jack.ford@duke.edu</a></dd>
+                            <dt>Find me online</dt>
+                            <dd class="social-links">
+                                <a href="https://www.linkedin.com/in/jack-barker-ford" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span></a>
+                                <a href="https://github.com/jack-ford" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span></a>
+                            </dd>
+                            <dt>Based in</dt>
+                            <dd>Bryn Mawr, PA</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+    <footer class="site-footer container">
+        <p>© <span id="current-year">2026</span> Jack Ford</p>
+        <a href="#home">Back to top <span aria-hidden="true">↑</span></a>
+    </footer>
 </body>
 </html>
