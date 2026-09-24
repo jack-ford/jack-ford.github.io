@@ -397,6 +397,7 @@ h3 {
     aspect-ratio: 6 / 7;
     object-fit: cover;
     margin-left: auto;
+    object-position: center 20%;
     border-radius: 3px;
 }
 
@@ -506,7 +507,7 @@ h3 {
     padding: 3px 9px;
 }
 
-.project-link-placeholder {
+.project-link {
     font-size: 0.8rem;
     margin-bottom: 0;
 }

@@ -38,7 +38,7 @@ siteHeader.addEventListener("keydown", (event) => {
     }
 });
 
-// Use the collapsed header height, even while the mobile menu is open.
+// Use collapsed header height even if the mobile menu is open
 let scrollPending = false;
 
 function updateActiveSection() {
@@ -74,7 +74,7 @@ window.addEventListener("resize", scheduleNavigationUpdate);
 window.addEventListener("pageshow", scheduleNavigationUpdate);
 updateActiveSection();
 
-// Capture only drags started on the card itself; links keep their native behavior.
+// make links work when dragging
 const card = document.getElementById("businessCard");
 let dragPointerId = null;
 let cardBounds;
@@ -92,7 +92,7 @@ function resetCard() {
 }
 
 function tiltCard(event) {
-    // Movement is relative to the grab point, so clicking an edge never tilts the card.
+    // relative drag movement = awesome sauce
     const x = (event.clientX - dragStartX) / (cardBounds.width / 2);
     const y = (event.clientY - dragStartY) / (cardBounds.height / 2);
     const clamp = (value) => Math.max(-1, Math.min(1, value));
@@ -102,7 +102,7 @@ function tiltCard(event) {
 card.addEventListener("pointerdown", (event) => {
     if (event.pointerType !== "mouse" || event.button !== 0 || reducedMotion.matches || event.target.closest("a")) return;
 
-    // Prevent text/image dragging only for this gesture, never for a card link.
+    // Prevent text/image dragging only
     event.preventDefault();
     cardBounds = card.getBoundingClientRect();
     dragStartX = event.clientX;

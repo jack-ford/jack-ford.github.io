@@ -9,7 +9,7 @@
         const savedTheme = localStorage.getItem(storageKey);
         if (savedTheme === "light" || savedTheme === "dark") preference = savedTheme;
     } catch {
-        // The toggle still works if the browser blocks local storage.
+        // The toggle probably still works if the browser blocks local storage lol
     }
 
     function applyTheme(theme) {
@@ -40,7 +40,7 @@
             try {
                 localStorage.setItem(storageKey, preference);
             } catch {
-                // Keep the chosen theme for this visit when storage is unavailable.
+                // idk about what happens here
             }
         });
     });
