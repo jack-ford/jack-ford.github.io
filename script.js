@@ -9,7 +9,6 @@ const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
 document.getElementById("current-year").textContent = new Date().getFullYear();
 
-// Include the name link so returning home also closes the mobile menu.
 const headerLinks = siteHeader.querySelectorAll('a[href^="#"]');
 
 headerLinks.forEach((link) => {
@@ -22,7 +21,7 @@ headerLinks.forEach((link) => {
             heading.setAttribute("tabindex", "-1");
             heading.focus({ preventScroll: true });
             heading.addEventListener("blur", () => heading.removeAttribute("tabindex"), { once: true });
-            // Re-align after the expanded menu stops taking up header space.
+            
             section.scrollIntoView();
         }, { once: true });
 
@@ -38,7 +37,6 @@ siteHeader.addEventListener("keydown", (event) => {
     }
 });
 
-// Use collapsed header height even if the mobile menu is open
 let scrollPending = false;
 
 function updateActiveSection() {
