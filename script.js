@@ -6,10 +6,12 @@ const navigation = document.getElementById("main-navigation");
 const siteHeader = document.querySelector(".site-header");
 const menuButton = document.querySelector(".navbar-toggler");
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+const particleCount = 200;
+const colors = ["#0d6efd", "#6f42c1", "#d63384", "#dc3545", "#fd7e14", "#ffc107", "#198754"];
 
 document.getElementById("current-year").textContent = new Date().getFullYear();
 
-const headerLinks = siteHeader.querySelectorAll('a[href^="#"]');
+const headerLinks = siteHeader.querySelectorAll("a[href^='#']");
 
 headerLinks.forEach((link) => {
     link.addEventListener("click", () => {
@@ -72,7 +74,6 @@ window.addEventListener("resize", scheduleNavigationUpdate);
 window.addEventListener("pageshow", scheduleNavigationUpdate);
 updateActiveSection();
 
-// make links work when dragging
 const card = document.getElementById("businessCard");
 let dragPointerId = null;
 let cardBounds;
@@ -120,3 +121,21 @@ card.addEventListener("lostpointercapture", resetCard);
 window.addEventListener("blur", resetCard);
 window.addEventListener("resize", resetCard);
 reducedMotion.addEventListener("change", resetCard);
+
+function confettiExplosion(e) {
+    const clicked = e.target;
+
+    const clickedRect = clicked.getBoundingClientRect();
+    const startX = (clickedRect.left + clickedRect.right) / 2.0 / window.innerWidth;
+    const startY = (clickedRect.top + clickedRect.bottom) / 2.0 / window.innerHeight;
+    
+    confetti({
+        particleCount: 60,
+        spread: 1000,
+        startVelocity: 15,
+        origin: { x: startX, y: startY },
+        zIndex: 9999
+    });
+}
+
+document.getElementById("confetti").addEventListener("click", confettiExplosion);
