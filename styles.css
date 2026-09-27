@@ -161,8 +161,8 @@ h3 {
     background: transparent;
 }
 
-.confetti:hover {
-  animation: tilt-shake 0.35s ease-in-out;
+.confetti-shake {
+    animation: tilt-shake 0.35s ease-in-out;
 }
 
 @keyframes tilt-shake {

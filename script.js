@@ -122,12 +122,21 @@ window.addEventListener("blur", resetCard);
 window.addEventListener("resize", resetCard);
 reducedMotion.addEventListener("change", resetCard);
 
+function confettiShake(e) {
+    const el = e.currentTarget;
+    el.classList.remove("confetti-shake");
+    void el.offsetWidth;
+    el.classList.add("confetti-shake");
+}
+
 function confettiExplosion(e) {
     const clicked = e.target;
 
     const clickedRect = clicked.getBoundingClientRect();
     const startX = (clickedRect.left + clickedRect.right) / 2.0 / window.innerWidth;
     const startY = (clickedRect.top + clickedRect.bottom) / 2.0 / window.innerHeight;
+
+    confettiShake(e);
     
     confetti({
         particleCount: 60,
@@ -138,4 +147,10 @@ function confettiExplosion(e) {
     });
 }
 
-document.getElementById("confetti").addEventListener("click", confettiExplosion);
+const confettiE = document.getElementById("confetti");
+confettiE.addEventListener("click", confettiExplosion);
+confettiE.addEventListener("mouseenter", confettiShake);
+confettiE.addEventListener("mouseleave", confettiShake);
+confettiE.addEventListener("animationend", () => {
+    confettiE.classList.remove("confetti-shake");
+});
