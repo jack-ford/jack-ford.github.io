@@ -6,8 +6,6 @@ const navigation = document.getElementById("main-navigation");
 const siteHeader = document.querySelector(".site-header");
 const menuButton = document.querySelector(".navbar-toggler");
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-const particleCount = 200;
-const colors = ["#0d6efd", "#6f42c1", "#d63384", "#dc3545", "#fd7e14", "#ffc107", "#198754"];
 
 document.getElementById("current-year").textContent = new Date().getFullYear();
 
@@ -150,7 +148,6 @@ function confettiExplosion(e) {
 const confettiE = document.getElementById("confetti");
 confettiE.addEventListener("click", confettiExplosion);
 confettiE.addEventListener("mouseenter", confettiShake);
-confettiE.addEventListener("mouseleave", confettiShake);
 confettiE.addEventListener("animationend", () => {
     confettiE.classList.remove("confetti-shake");
 });
