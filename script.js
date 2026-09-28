@@ -147,7 +147,6 @@ function confettiExplosion(e) {
 
 const confettiE = document.getElementById("confetti");
 confettiE.addEventListener("click", confettiExplosion);
-confettiE.addEventListener("mouseenter", confettiShake);
 confettiE.addEventListener("animationend", () => {
     confettiE.classList.remove("confetti-shake");
 });
