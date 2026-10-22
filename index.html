@@ -45,8 +45,11 @@
     </header>
     <main id="main-content">
         <section class="home-section" id="home" aria-labelledby="home-title">
+            <div class="card-stage">
             <div class="business-card-frame">
                 <div class="business-card" id="businessCard">
+                    <div class="card-flipper">
+                    <div class="card-face card-front">
                     <a class="phone-number" href="tel:+16108889511">(610) 888-9511</a>
                     <div class="logos">
                         <img class="logo" src="haverford.png" width="72" height="64" alt="Haverford">
@@ -62,28 +65,32 @@
                         <a href="assets/resume.pdf" target="_blank">Resume</a>
                         <a href="https://github.com/jack-ford" target="_blank" rel="noopener noreferrer">GitHub<span class="visually-hidden"> (opens in a new tab)</span></a>
                     </div>
-                </div>
-            </div>
-            <a class="scroll-link" href="#about">A little more about me <span aria-hidden="true">↓</span></a>
-        </section>
-        <section class="page-section" id="about" aria-labelledby="about-title">
-            <div class="container">
-                <div class="row g-5 align-items-center">
-                    <div class="col-md-8">
-                        <div class="section-heading background-section">
-                            <p class="section-number">01 / About</p>
-                            <h2 id="about-title">A bit of background:</h2>
-                        </div>
-                        <div class="about-description">
-                            <p>Hey there! I'm Jack, a freshman at Duke studying Electrical & Computer Engineering with a double major in Computer Science. I've been passionate about building since 7th grade and look forward to seeing where I will end up next. Currently, I'm interested in machine learning, computer vision, event cameras, SLAM, robotics, and software engineering.</p>
-                            <p>Outside of work and school, I love playing/watching sports (squash, basketball, football), going on hikes in nature, spiking my adrenaline (skydiving, bungee jumping, etc), playing poker, going to the beach, and hanging out with friends and family.</p>
-                        </div>
                     </div>
-                    <div class="col-md-4">
-                        <img class="portrait" src="assets/jackford_headshot.jpg" width="600" height="700" alt="Headshot" loading="lazy">
+                    <section class="card-face card-back" aria-labelledby="about-title" inert aria-hidden="true">
+                        <img class="card-portrait" src="assets/jackford_headshot.jpg" width="600" height="700" alt="Jack Ford" draggable="false">
+                        <div class="card-bio">
+                            <p class="card-eyebrow">01 / About</p>
+                            <h2 id="about-title">My Interests</h2>
+                            <ul class="card-interests">
+                                <li>Machine learning</li>
+                                <li>Computer vision &amp; event cameras</li>
+                                <li>Robotics &amp; SLAM</li>
+                                <li>Chess engine development</li>
+                                <li>Running, squash, hiking</li>
+                            </ul>
+                        </div>
+                    </section>
                     </div>
                 </div>
             </div>
+            <div class="card-controls">
+                <span class="drag-hint"><span aria-hidden="true">&#10021;</span> Drag to tilt</span>
+                <button class="scroll-link" id="flip-card" type="button" aria-controls="businessCard" aria-label="Show the back of the business card">
+                    <span id="flip-label">Scroll to meet me</span><span aria-hidden="true">&#8595;</span>
+                </button>
+            </div>
+            </div>
+            <div id="about" class="about-marker" aria-hidden="true"></div>
         </section>
         <section class="page-section" id="experience" aria-labelledby="experience-title">
             <div class="container">
